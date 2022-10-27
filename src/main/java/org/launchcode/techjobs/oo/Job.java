@@ -93,9 +93,26 @@ public class Job {
         this.coreCompetency = coreCompetency;
     }
 
-    public String toString(){
-        return Job.
+    @Override
+    public String toString() {
+
+        if(this.getName().isEmpty()){
+            this.getName().toString()"Data not available");
+        }
+
+        return
+                "\n ID: " + this.getId() +
+                        "\n" +
+               "\n Name: " + this.getName() +"\n" +
+                         "\n Employer: " + this.getEmployer() + "\n" +
+                         "\n Location: " + this.getLocation() + "\n " +
+                         "\n Position Type: " + this.getPositionType() + "\n" +
+                         "\n Core Competency: " + this.getCoreCompetency() + "\n";
     }
+
+// if (someJobs.isEmpty()){
+//        System.out.print("No Results");
+
 
 
 }
