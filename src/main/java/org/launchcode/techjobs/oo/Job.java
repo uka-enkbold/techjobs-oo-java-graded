@@ -9,10 +9,11 @@ public class Job {
     private int id;
     private static int nextId = 1;
 
-    public Job (){
+    public Job() {
         id = nextId;
         nextId++;
     }
+
     private String name;
     private Employer employer;
     private Location location;
@@ -95,24 +96,27 @@ public class Job {
 
     @Override
     public String toString() {
-
-        if(this.getName().isEmpty()){
-            this.getName().toString()"Data not available");
+        if (this.getName().equals("")) {
+            this.setName("Data not available");
         }
-
+        if (this.getEmployer().getValue().equals("")) {
+            this.employer.setValue("Data not available");
+        }
+        if (this.getLocation().getValue().equals("")) {
+            this.location.setValue("Data not available");
+        }
+        if (this.getPositionType().getValue().equals("")) {
+            this.positionType.setValue("Data not available");
+        }
+        if (this.coreCompetency.getValue().equals("")) {
+            this.coreCompetency.setValue("Data not available");
+        }
         return
-                "\n ID: " + this.getId() +
-                        "\n" +
-               "\n Name: " + this.getName() +"\n" +
-                         "\n Employer: " + this.getEmployer() + "\n" +
-                         "\n Location: " + this.getLocation() + "\n " +
-                         "\n Position Type: " + this.getPositionType() + "\n" +
-                         "\n Core Competency: " + this.getCoreCompetency() + "\n";
+                        "\nID: " + this.getId() + "\n" +
+                        "Name: " + this.getName() + "\n" +
+                        "Employer: " + this.getEmployer().getValue() + "\n" +
+                        "Location: " + this.getLocation().getValue() + "\n" +
+                        "Position Type: " + this.getPositionType().getValue() + "\n" +
+                        "Core Competency: " + this.getCoreCompetency().getValue() + "\n";
     }
-
-// if (someJobs.isEmpty()){
-//        System.out.print("No Results");
-
-
-
 }

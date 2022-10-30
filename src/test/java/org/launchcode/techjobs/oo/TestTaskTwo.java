@@ -105,7 +105,7 @@ public class TestTaskTwo extends AbstractTest {
         /*
          * Look for .equals either on PositionType or its superclass.
          * If looking on the superclass, ensure that the student has
-         * created the JobField base class and pulled the method up.
+         * created the org.launchcode.techjobs.oo.JobField base class and pulled the method up.
          * */
         try {
             PositionType.class.getDeclaredMethod("equals", Object.class);
