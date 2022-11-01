@@ -13,9 +13,9 @@ public class TestTaskSix extends AbstractTest {
     @Test
     public void testJobFieldClassExists() {
         try {
-            Class theClass = getClassByName("org.launchcode.techjobs.oo.JobField");
+            Class theClass = getClassByName("JobField");
         } catch (ClassNotFoundException e) {
-            fail("Class org.launchcode.techjobs.oo.org.launchcode.techjobs.oo.JobField does not exist");
+            fail("JobField does not exist");
         }
     }
 
@@ -27,9 +27,9 @@ public class TestTaskSix extends AbstractTest {
         Class superclass;
 
         try {
-            jobFieldClass = getClassByName("org.launchcode.techjobs.oo.JobField");
+            jobFieldClass = getClassByName("JobField");
         } catch (ClassNotFoundException e) {
-            fail("Class org.launchcode.techjobs.oo.Employer does not exist");
+            fail("Employer does not exist");
         }
 
         try {
@@ -37,7 +37,7 @@ public class TestTaskSix extends AbstractTest {
             superclass = employerClass.getSuperclass();
             assertEquals(superclass, jobFieldClass);
         } catch (ClassNotFoundException e) {
-            fail("Class org.launchcode.techjobs.oo.Employer does not exist");
+            fail("Employer does not exist");
         }
 
     }
@@ -50,9 +50,9 @@ public class TestTaskSix extends AbstractTest {
         Class superclass;
 
         try {
-            jobFieldClass = getClassByName("org.launchcode.techjobs.oo.JobField");
+            jobFieldClass = getClassByName("JobField");
         } catch (ClassNotFoundException e) {
-            fail("Class org.launchcode.techjobs.oo.Employer does not exist");
+            fail("Employer does not exist");
         }
 
         try {
@@ -60,7 +60,7 @@ public class TestTaskSix extends AbstractTest {
             superclass = coreCompetencyClass.getSuperclass();
             assertEquals(superclass, jobFieldClass);
         } catch (ClassNotFoundException e) {
-            fail("Class org.launchcode.techjobs.oo.CoreCompetency does not exist");
+            fail("CoreCompetency does not exist");
         }
 
     }
@@ -73,9 +73,9 @@ public class TestTaskSix extends AbstractTest {
         Class superclass;
 
         try {
-            jobFieldClass = getClassByName("org.launchcode.techjobs.oo.JobField");
+            jobFieldClass = getClassByName("JobField");
         } catch (ClassNotFoundException e) {
-            fail("Class org.launchcode.techjobs.oo.Employer does not exist");
+            fail("Employer does not exist");
         }
 
         try {
@@ -83,7 +83,7 @@ public class TestTaskSix extends AbstractTest {
             superclass = locationClass.getSuperclass();
             assertEquals(superclass, jobFieldClass);
         } catch (ClassNotFoundException e) {
-            fail("Class org.launchcode.techjobs.oo.Location does not exist");
+            fail("Location does not exist");
         }
 
     }
@@ -96,9 +96,9 @@ public class TestTaskSix extends AbstractTest {
         Class superclass;
 
         try {
-            jobFieldClass = getClassByName("org.launchcode.techjobs.oo.JobField");
+            jobFieldClass = getClassByName("JobField");
         } catch (ClassNotFoundException e) {
-            fail("Class org.launchcode.techjobs.oo.Employer does not exist");
+            fail("Employer does not exist");
         }
 
         try {
@@ -106,7 +106,7 @@ public class TestTaskSix extends AbstractTest {
             superclass = positionTypeClass.getSuperclass();
             assertEquals(superclass, jobFieldClass);
         } catch (ClassNotFoundException e) {
-            fail("Class org.launchcode.techjobs.oo.PositionType does not exist");
+            fail("PositionType does not exist");
         }
 
     }

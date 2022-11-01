@@ -7,15 +7,16 @@ public abstract class JobField {
     private static int nextId = 1;
     private String value;
 
-    public JobField(int id) {
-        this.id = id;
-    }
     public JobField() {
-        this.id = nextId++;
+        this.id = nextId;
+        nextId++;
     }
-
     public JobField(String value) {
+        this();
         this.value = value;
+    }
+    public int getId() {
+        return id;
     }
 
     public String getValue() {
@@ -24,11 +25,6 @@ public abstract class JobField {
     public void setValue(String value) {
         this.value = value;
     }
-
-    public int getId() {
-        return id;
-    }
-
     public String toString() {
         return value;
     }
@@ -38,11 +34,11 @@ public abstract class JobField {
         if (this == o) return true;
         if (!(o instanceof JobField)) return false;
         JobField jobField = (JobField) o;
-        return getId() == jobField.getId() && Objects.equals(getValue(), jobField.getValue());
+        return id == jobField.id;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getValue());
+        return Objects.hash(getId());
     }
 }
